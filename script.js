@@ -8,8 +8,8 @@ function ocultarLoader() {
 }
 
 // URL de tu Apps Script Backend
-const URL_API_BUSCAR = 'https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnScK2_wVFfyxOuvEAj27_5xnwKrB7Q9S3Jid9w6tkckPn-yTn66VHMhkwRQeLYq5ox3wbgZfmUZbmsqtdzTpoY5_I7hKgEC2RUivTvvcF9DfwGlaOh2-C8MQNzM6bEpC1hecp26zQg0KIlKHcFpKwejms-J9oeJ3ToyZHEb1BELGfOss5V7PAVAPjCjyqAv-GwGat0O4X9rEliu94jDy7_vBPWvfzu4wNsOhmLTJvCG6PrmI9ban7FzM6ohW2UULG2KMZ6JElVyltcgd3vuCy8WcrjyPA&lib=M9dmek4BD_6csBGetBlO2hvoop7VGKVkC';
-const URL_API_DEUDORES = 'https://script.googleusercontent.com/macros/echo?user_content_key=AUkAhnScK2_wVFfyxOuvEAj27_5xnwKrB7Q9S3Jid9w6tkckPn-yTn66VHMhkwRQeLYq5ox3wbgZfmUZbmsqtdzTpoY5_I7hKgEC2RUivTvvcF9DfwGlaOh2-C8MQNzM6bEpC1hecp26zQg0KIlKHcFpKwejms-J9oeJ3ToyZHEb1BELGfOss5V7PAVAPjCjyqAv-GwGat0O4X9rEliu94jDy7_vBPWvfzu4wNsOhmLTJvCG6PrmI9ban7FzM6ohW2UULG2KMZ6JElVyltcgd3vuCy8WcrjyPA&lib=M9dmek4BD_6csBGetBlO2hvoop7VGKVkC';
+const URL_API_BUSCAR = 'https://script.google.com/macros/s/AKfycbyBSp4CeV3vqWR1OMdtYTm8ix1nj97KQTegQap3o6Uz1f7uvDZeh6fcoBO6mxe8zmAm/exec';
+const URL_API_DEUDORES = 'https://script.google.com/macros/s/AKfycbyBSp4CeV3vqWR1OMdtYTm8ix1nj97KQTegQap3o6Uz1f7uvDZeh6fcoBO6mxe8zmAm/exec';
 
 // Buscar por celular
 function buscar() {
