@@ -1,28 +1,25 @@
 <!DOCTYPE html>
-<html lang="es">
+<html>
 <head>
-<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pagos Pendientes</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
   <div class="card">
-    <h2>💰 Pagos Pendientes</h2>
+    <h2>Pagos Pendientes</h2>
+
     <input type="text" id="celular" placeholder="Número de celular">
-    <button class="btn-blue" onclick="buscar()">🔍 Buscar</button>
-    <button class="btn-green" onclick="verDeudores()">📋 Ver todos</button>
-    <button class="btn-dark" onclick="generarPagos()">📨 Generar cobros</button>
+
+    <button onclick="buscar()">Buscar</button>
+    <button onclick="verDeudores()">Ver todos</button>
+    <button onclick="generarPagos()">Generar pagos</button>
   </div>
 
   <div class="card">
-    <div id="total" class="total"></div>
-    <div id="loading" style="display:none;text-align:center;">
-      <img src="https://i.gifer.com/ZZ5H.gif" width="50">
-      <p>Cargando...</p>
-    </div>
+    <div id="total"></div>
+    <div id="loading" style="display:none">Cargando...</div>
     <div id="resultados"></div>
   </div>
 </div>
