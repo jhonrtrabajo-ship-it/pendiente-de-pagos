@@ -3,9 +3,11 @@ const URL_API = 'https://script.google.com/macros/s/AKfycbyBSp4CeV3vqWR1OMdtYTm8
 function mostrarLoader(){ document.getElementById('loading').style.display='block'; }
 function ocultarLoader(){ document.getElementById('loading').style.display='none'; }
 
+// 🔍 Buscar
 function buscar(){
   mostrarLoader();
   const celular = document.getElementById('celular').value;
+
   fetch(URL_API + '?celular=' + encodeURIComponent(celular))
     .then(res=>res.json())
     .then(data=>{
@@ -14,8 +16,10 @@ function buscar(){
     });
 }
 
+// 📋 Ver todos
 function verDeudores(){
   mostrarLoader();
+
   fetch(URL_API + '?accion=deudores')
     .then(res=>res.json())
     .then(data=>{
@@ -24,8 +28,10 @@ function verDeudores(){
     });
 }
 
+// 📨 Generar pagos
 function generarPagos(){
   mostrarLoader();
+
   fetch(URL_API + '?accion=generarPagos')
     .then(res=>res.json())
     .then(data=>{
@@ -34,6 +40,37 @@ function generarPagos(){
     });
 }
 
+// ✅ Marcar pagado
+function marcarPagado(fecha, producto, correo, celular){
+
+  mostrarLoader();
+
+  fetch(URL_API, {
+    method: "POST",
+    body: JSON.stringify({
+      action: "actualizarPago",
+      fecha_venta: fecha,
+      nombre_producto: producto,
+      Correo: correo,
+      celular: celular,
+      nuevo_estado: "Pagado"
+    }),
+    headers: { "Content-Type": "application/json" }
+  })
+  .then(res=>res.json())
+  .then(data=>{
+    ocultarLoader();
+
+    if(data.ok){
+      alert("✅ Pago actualizado");
+      verDeudores();
+    } else {
+      alert("❌ Error al actualizar");
+    }
+  });
+}
+
+// 🎯 Mostrar
 function mostrar(data){
   if(!data || data.length===0){
     document.getElementById('resultados').innerHTML="No hay datos";
@@ -49,13 +86,17 @@ function mostrar(data){
 
     html += `
     <div class="item">
-      <div><b>Fecha:</b> ${d.fecha_venta}</div>
-      <div><b>Producto:</b> ${d.nombre_producto}</div>
-      <div><b>Cliente:</b> ${d.nombre_cliente}</div>
-      <div><b>Correo:</b> ${d.Correo}</div>
-      <div><b>Celular:</b> ${d.celular}</div>
-      <div><b>Valor:</b> ${d.venta}</div>
+      <div><b>📅 Fecha:</b> ${d.fecha_venta}</div>
+      <div><b>📺 Producto:</b> ${d.nombre_producto}</div>
+      <div><b>👤 Cliente:</b> ${d.nombre_cliente}</div>
+      <div><b>✉️ Correo:</b> ${d.Correo}</div>
+      <div><b>📞 Celular:</b> ${d.celular}</div>
+      <div><b>💰 Valor:</b> ${d.venta}</div>
       <div><b>Estado:</b> ${d.estado_pago}</div>
+
+      <button onclick="marcarPagado('${d.fecha_venta}','${d.nombre_producto}','${d.Correo}','${d.celular}')">
+        ✅ Marcar pagado
+      </button>
     </div>`;
   });
 
