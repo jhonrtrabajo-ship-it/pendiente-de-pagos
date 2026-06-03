@@ -8,18 +8,24 @@
 
 <div class="container">
   <div class="card">
-    <h2>Pagos Pendientes</h2>
+    <h2>💰 Pagos Pendientes</h2>
 
     <input type="text" id="celular" placeholder="Número de celular">
 
-    <button onclick="buscar()">Buscar</button>
-    <button onclick="verDeudores()">Ver todos</button>
-    <button onclick="generarPagos()">Generar pagos</button>
+    <button class="btn-blue" onclick="buscar()">🔍 Buscar</button>
+    <button class="btn-green" onclick="verDeudores()">📋 Ver todos</button>
+    <button class="btn-dark" onclick="generarPagos()">📨 Generar cobros</button>
   </div>
 
   <div class="card">
     <div id="total"></div>
-    <div id="loading" style="display:none">Cargando...</div>
+
+    <!-- 🔥 LOADER -->
+    <div id="loading" style="display:none;">
+      <img src="https://i.gifer.com/ZZ5H.gif" width="60">
+      <p>Cargando...</p>
+    </div>
+
     <div id="resultados"></div>
   </div>
 </div>
