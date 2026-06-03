@@ -40,34 +40,32 @@ function generarPagos(){
     });
 }
 
-// ✅ Marcar pagado
+// ✅ Marcar pagado (FIX)
 function marcarPagado(fecha, producto, correo, celular){
 
   mostrarLoader();
 
-  fetch(URL_API, {
-    method: "POST",
-    body: JSON.stringify({
-      action: "actualizarPago",
-      fecha_venta: fecha,
-      nombre_producto: producto,
-      Correo: correo,
-      celular: celular,
-      nuevo_estado: "Pagado"
-    }),
-    headers: { "Content-Type": "application/json" }
-  })
-  .then(res=>res.json())
-  .then(data=>{
-    ocultarLoader();
-
-    if(data.ok){
-      alert("✅ Pago actualizado");
-      verDeudores();
-    } else {
-      alert("❌ Error al actualizar");
-    }
+  const params = new URLSearchParams({
+    accion: "actualizarPago",
+    fecha_venta: fecha,
+    nombre_producto: producto,
+    Correo: correo,
+    celular: celular,
+    nuevo_estado: "Pagado"
   });
+
+  fetch(URL_API + "?" + params.toString())
+    .then(res=>res.json())
+    .then(data=>{
+      ocultarLoader();
+
+      if(data.ok){
+        alert("✅ Pago actualizado");
+        verDeudores();
+      } else {
+        alert("❌ No se pudo actualizar");
+      }
+    });
 }
 
 // 🎯 Mostrar
