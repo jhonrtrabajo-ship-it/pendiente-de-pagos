@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<title>Pagos Pendientes</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+  <div class="card">
+    <h2>💰 Pagos Pendientes</h2>
+
+    <input type="text" id="celular" placeholder="Número de celular">
+
+    <button class="btn-blue">🔍 Buscar</button>
+    <button class="btn-green">📋 Ver todos</button>
+    <button class="btn-dark">📨 Generar cobros</button>
+  </div>
+
+  <div class="card">
+    <div id="total" class="total"></div>
+
+    <div id="loading">
+      <img src="https://i.gifer.com/ZZ5H.gif" width="50">
+      <p>Cargando...</p>
+    </div>
+
+    <div id="resultados"></div>
+  </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
