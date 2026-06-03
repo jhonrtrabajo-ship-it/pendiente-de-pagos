@@ -40,7 +40,7 @@ function generarPagos(){
     });
 }
 
-// ✅ Marcar pagado (FIX)
+// ✅ Marcar pagado
 function marcarPagado(fecha, producto, correo, celular){
 
   mostrarLoader();
@@ -63,7 +63,7 @@ function marcarPagado(fecha, producto, correo, celular){
         alert("✅ Pago actualizado");
         verDeudores();
       } else {
-        alert("❌ No se pudo actualizar");
+        alert("❌ Error");
       }
     });
 }
