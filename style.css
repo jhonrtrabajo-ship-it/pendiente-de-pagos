@@ -18,6 +18,7 @@ body, html {
   margin: 10px;
   border-radius: 12px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  overflow: hidden; /* 🔥 evita que el input se salga */
 }
 
 /* Título */
@@ -25,18 +26,19 @@ h2 {
   text-align: center;
 }
 
-/* Inputs */
-input {
+/* INPUT CORREGIDO 🔥 */
+.card input {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
   font-size: 16px;
+  box-sizing: border-box; /* 🔥 clave */
 }
 
 /* Botones */
-button {
+.card button {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
@@ -45,6 +47,7 @@ button {
   font-size: 16px;
   color: white;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 /* Colores */
@@ -67,7 +70,7 @@ button {
   margin: 10px 0;
 }
 
-/* Tarjetas resultados */
+/* Resultados */
 .item {
   background: white;
   padding: 12px;
@@ -90,6 +93,7 @@ button {
 
 /* Responsive */
 @media (min-width: 768px) {
+
   .item {
     display: flex;
     flex-wrap: wrap;
