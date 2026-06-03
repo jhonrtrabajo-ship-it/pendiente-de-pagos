@@ -1,5 +1,47 @@
-body { font-family: Arial; background:#f4f6f9; }
-.card { background:white; padding:15px; margin:10px; border-radius:10px; }
-button { width:100%; margin-top:5px; padding:10px; }
-input { width:100%; padding:10px; margin-top:5px; }
-.item { background:#fff; margin:10px; padding:10px; border-radius:10px; }
+body, html {
+  margin:0;
+  padding:0;
+  font-family: Arial;
+  background:#f4f6f9;
+}
+.container { width:100%; }
+.card {
+  background:white;
+  padding:15px;
+  margin:10px;
+  border-radius:12px;
+  box-shadow:0 2px 6px rgba(0,0,0,0.15);
+}
+h2 { text-align:center; }
+input {
+  width:100%;
+  padding:12px;
+  margin-top:5px;
+  border-radius:8px;
+  border:1px solid #ccc;
+}
+button {
+  width:100%;
+  padding:14px;
+  margin-top:8px;
+  border:none;
+  border-radius:8px;
+  font-size:16px;
+  color:white;
+}
+.btn-blue {background:#2e86de;}
+.btn-green {background:#27ae60;}
+.btn-dark {background:#34495e;}
+.total {
+  font-size:18px;
+  font-weight:bold;
+  text-align:center;
+  color:#c0392b;
+}
+.item {
+  background:white;
+  padding:10px;
+  margin-bottom:10px;
+  border-radius:10px;
+  box-shadow:0 1px 4px rgba(0,0,0,0.1);
+}
