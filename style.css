@@ -5,11 +5,13 @@ body, html {
   background: #f4f6f9;
 }
 
+/* Contenedor */
 .container {
   max-width: 900px;
   margin: auto;
 }
 
+/* Tarjetas */
 .card {
   background: white;
   padding: 15px;
@@ -18,27 +20,87 @@ body, html {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
+/* Título */
+h2 {
+  text-align: center;
+}
+
+/* Inputs */
 input {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  font-size: 16px;
 }
 
+/* Botones */
 button {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
   border: none;
   border-radius: 8px;
-  background: #2e86de;
+  font-size: 16px;
   color: white;
+  cursor: pointer;
 }
 
+/* Colores */
+.btn-blue { background: #2e86de; }
+.btn-green { background: #27ae60; }
+.btn-dark { background: #34495e; }
+
+/* Total */
+#total {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: center;
+  color: #c0392b;
+  margin-bottom: 10px;
+}
+
+/* Loader */
+#loading {
+  text-align: center;
+  margin: 10px 0;
+}
+
+/* Tarjetas resultados */
 .item {
   background: white;
   padding: 12px;
-  margin-top: 10px;
+  margin-bottom: 10px;
   border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+}
+
+/* Texto */
+.item div {
+  margin: 4px 0;
+  font-size: 14px;
+}
+
+/* Botón pagado */
+.item button {
+  background: #27ae60;
+  margin-top: 10px;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .item {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .item div {
+    flex: 1 1 30%;
+    text-align: center;
+  }
+
+  .item button {
+    flex: 1 1 100%;
+  }
 }
