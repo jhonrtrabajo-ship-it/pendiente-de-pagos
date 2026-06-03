@@ -1,19 +1,15 @@
-/* Reset básico */
 body, html {
   margin: 0;
   padding: 0;
-  font-family: Arial, sans-serif;
+  font-family: Arial;
   background: #f4f6f9;
 }
 
-/* Contenedor */
 .container {
-  width: 100%;
   max-width: 900px;
   margin: auto;
 }
 
-/* Tarjetas */
 .card {
   background: white;
   padding: 15px;
@@ -22,90 +18,27 @@ body, html {
   box-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
-/* Título */
-h2 {
-  text-align: center;
-  margin-bottom: 10px;
-}
-
-/* Inputs */
 input {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
   border-radius: 8px;
   border: 1px solid #ccc;
-  font-size: 16px;
 }
 
-/* Botones */
 button {
   width: 100%;
   padding: 12px;
   margin-top: 8px;
   border: none;
   border-radius: 8px;
-  font-size: 16px;
-  cursor: pointer;
+  background: #2e86de;
+  color: white;
 }
 
-/* Colores botones */
-button:nth-child(3) { background: #2e86de; color: white; }
-button:nth-child(4) { background: #27ae60; color: white; }
-button:nth-child(5) { background: #34495e; color: white; }
-
-/* Total */
-#total {
-  font-size: 18px;
-  font-weight: bold;
-  text-align: center;
-  color: #c0392b;
-  margin-bottom: 10px;
-}
-
-/* Loader */
-#loading {
-  text-align: center;
-  margin: 10px 0;
-}
-
-/* Tarjetas de resultados */
 .item {
   background: white;
   padding: 12px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-}
-
-/* Texto dentro */
-.item div {
-  margin: 4px 0;
-  font-size: 14px;
-}
-
-/* Botón marcar pagado */
-.item button {
-  background: #27ae60;
-  color: white;
   margin-top: 10px;
-}
-
-/* 🖥️ Modo escritorio */
-@media (min-width: 768px) {
-
-  .item {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  .item div {
-    flex: 1 1 30%;
-    text-align: center;
-  }
-
-  .item button {
-    flex: 1 1 100%;
-  }
+  border-radius: 10px;
 }
